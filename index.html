@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jorge | About Me</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f6f3ee;
+      color: #242424;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #242424;
+      color: white;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: #e4ad78;
+    }
+
+    section {
+      max-width: 1050px;
+      margin: auto;
+      padding: 65px 25px;
+    }
+
+    .hero {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 90px);
+      line-height: 1.1;
+      margin: 15px 0;
+      letter-spacing: -3px;
+    }
+
+    .tag {
+      color: #b66c38;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      max-width: 680px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #242424;
+      color: white;
+      padding: 13px 25px;
+      margin-top: 20px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .button:hover {
+      background: #b66c38;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      border: 1px solid #e6e0d8;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .chart-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #e6e0d8;
+      margin-top: 25px;
+    }
+
+    .chart-row {
+      margin-bottom: 22px;
+    }
+
+    .chart-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .chart-track {
+      background: #eee9e3;
+      height: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .chart-bar {
+      background: #b66c38;
+      height: 100%;
+      width: 0;
+      transition: width 0.6s ease;
+      cursor: pointer;
+    }
+
+    .chart-bar:hover {
+      background: #242424;
+    }
+
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      background: white;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background: #242424;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">JK.</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#chart">Chart</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="tag">Graphic Design Student</div>
+    <h1>Hello, I'm Jorge.</h1>
+    <p>
+      I'm a Graphic Design student at Queens College
+      with a passion for creativity, visual storytelling,
+      and exploring new ideas through design.
+    </p>
+    <a href="#about" class="button">More About Me</a>
+  </section>
+
+  <section id="about">
+    <div class="tag">01 / Introduction</div>
+    <h2>About Me</h2>
+    <p>
+      I'm currently studying Graphic Design at Queens
+      College. I enjoy creating visual experiences
+      that combine creativity with functionality.
+    </p>
+    <p>
+      My interests include branding, illustration,
+      typography, and user experience design.
+      I enjoy experimenting with different styles
+      and finding creative ways to communicate ideas.
+    </p>
+  </section>
+
+  <section id="interests">
+    <div class="tag">02 / What I Enjoy</div>
+    <h2>My Creative Interests</h2>
+
+    <div class="cards">
+      <div class="card">
+        <h3>Brand Identity</h3>
+        <p>
+          Creating logos, visual identities,
+          and unique designs for brands.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Illustration</h3>
+        <p>
+          Bringing characters and ideas to
+          life through visual storytelling.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>UX/UI Design</h3>
+        <p>
+          Designing digital experiences
+          that are simple and easy to use.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chart">
+    <div class="tag">03 / Data Visualization</div>
+    <h2>My Design Interests</h2>
+
+    <p>
+      This interactive chart shows my personal
+      interest levels across different design areas.
+      Select a category to explore the data.
+    </p>
+
+    <div class="chart-box">
+      <label for="chartSelect">
+        <strong>Choose a dataset:</strong>
+      </label>
+
+      <br><br>
+
+      <select id="chartSelect">
+        <option value="interest">Interest Level</option>
+        <option value="experience">Experience Level</option>
+      </select>
+
+      <div id="chartContainer"></div>
+
+      <p id="chartInfo">
+        Hover over a bar to explore the values.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>Designed by Jorge | 2026</p>
+  </footer>
+
+  <script>
+    // Example self-ratings. Replace with your own values.
+    const designData = [
+      { name: "Branding", interest: 95, experience: 75 },
+      { name: "Illustration", interest: 90, experience: 80 },
+      { name: "Typography", interest: 85, experience: 70 },
+      { name: "UX/UI Design", interest: 88, experience: 65 },
+      { name: "Data Visualization", interest: 78, experience: 60 }
+    ];
+
+    const chartContainer =
+      document.getElementById("chartContainer");
+
+    const chartSelect =
+      document.getElementById("chartSelect");
+
+    const chartInfo =
+      document.getElementById("chartInfo");
+
+    function drawChart(type) {
+      chartContainer.innerHTML = "";
+
+      designData.forEach(item => {
+        const value = item[type];
+
+        const row = document.createElement("div");
+        row.className = "chart-row";
+
+        const label = document.createElement("div");
+        label.className = "chart-label";
+
+        const name = document.createElement("span");
+        name.textContent = item.name;
+
+        const number = document.createElement("span");
+        number.textContent = value + "%";
+
+        label.appendChild(name);
+        label.appendChild(number);
+
+        const track = document.createElement("div");
+        track.className = "chart-track";
+
+        const bar = document.createElement("div");
+        bar.className = "chart-bar";
+        bar.style.width = value + "%";
+        bar.title = item.name + ": " + value + "%";
+
+        bar.addEventListener("mouseenter", () => {
+          chartInfo.textContent =
+            item.name + " — " + value +
+            "% " + (type === "interest"
+              ? "interest level"
+              : "experience level");
+        });
+
+        bar.addEventListener("click", () => {
+          chartInfo.textContent =
+            item.name + ": " + value + "%";
+        });
+
+        track.appendChild(bar);
+        row.appendChild(label);
+        row.appendChild(track);
+        chartContainer.appendChild(row);
+      });
+    }
+
+    chartSelect.addEventListener("change", () => {
+      drawChart(chartSelect.value);
+    });
+
+    drawChart("interest");
+  </script>
+
+</body>
+</html>
